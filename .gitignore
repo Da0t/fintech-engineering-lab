@@ -11,3 +11,5 @@ artifacts/screenshots/
 .env
 .env.*
 !.env.example
+
+applications/

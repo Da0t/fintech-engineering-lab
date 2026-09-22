@@ -1,4 +1,6 @@
-# Fintech Engineering Lab
+# Fintech Engineering Lab — original prototype
+
+> Superseded by two independent applications: [ClearLedger](https://github.com/Da0t/clearledger) and [MarketLab](https://github.com/Da0t/marketlab). Each has its own public deployment, source, tests, and CI. The code below is retained as the original prototype.
 
 Two runnable portfolio projects about financial correctness and market execution.
 Built for Dat Nguyen's software engineering portfolio, drawing on his streaming,
@@ -6,8 +8,8 @@ replay, distributed-systems, and full-stack experience.
 
 | Project | What it demonstrates | Demo |
 | --- | --- | --- |
-| **ClearLedger** | Balanced journal, durable event inbox, idempotency, reservations, refunds, and provider reconciliation | [Open public demo](https://fintech-engineering-lab.vercel.app/clearledger) |
-| **MarketLab** | Java price/time matching, execution costs, buying-power reservations, synthetic feed recovery, and deterministic replay | [Open public demo](https://fintech-engineering-lab.vercel.app/marketlab) |
+| **ClearLedger** | Balanced journal, durable event inbox, idempotency, reservations, refunds, and provider reconciliation | [Open public demo](https://dat-clearledger.vercel.app) |
+| **MarketLab** | Java price/time matching, execution costs, buying-power reservations, synthetic feed recovery, and deterministic replay | [Open public demo](https://dat-marketlab.vercel.app) |
 
 These are **synthetic prototypes with public demos and a local mode**. No login,
 accounts at financial institutions, API keys, payment credentials, or real funds

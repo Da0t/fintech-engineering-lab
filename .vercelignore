@@ -7,3 +7,5 @@
 artifacts/screenshots
 *.log
 .env*
+
+applications/

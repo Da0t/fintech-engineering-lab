@@ -9,13 +9,52 @@
       "excludeFiles": "{.git/**,.data/**,tests/**,artifacts/**,.pytest_cache/**,.venv/**}"
     }
   },
-  "env": {"PUBLIC_DEMO": "1"},
+  "env": {
+    "PUBLIC_DEMO": "1"
+  },
   "headers": [
-    {"source":"/(.*)","headers":[
-      {"key":"X-Content-Type-Options","value":"nosniff"},
-      {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},
-      {"key":"X-Frame-Options","value":"DENY"}
-    ]},
-    {"source":"/api/(.*)","headers":[{"key":"Cache-Control","value":"no-store"}]}
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/clearledger",
+      "destination": "https://dat-clearledger.vercel.app",
+      "permanent": true
+    },
+    {
+      "source": "/marketlab",
+      "destination": "https://dat-marketlab.vercel.app",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "https://dat-clearledger.vercel.app",
+      "permanent": false
+    }
   ]
 }
