@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+.data/
+marketlab/build/
+artifacts/screenshots/
+*.log
+.vercel/
+.runtime/
+.env
+.env.*
+!.env.example

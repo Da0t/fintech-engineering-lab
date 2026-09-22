@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "duplicate-delivery / worker-recovery UI",
+    "refund and independent provider acknowledgment",
+    "reservation / release / settlement",
+    "deposit form decimal conversion",
+    "liquid vs. thin order fills and cost breakdown",
+    "limit order reservation and cancellation",
+    "feed-gap recovery and complete state replay",
+    "lost HTTP response retried without executing the trade twice",
+    "1440px desktop / 390px mobile layout without viewport overflow",
+    "zero browser JavaScript exceptions"
+  ],
+  "passed": 10,
+  "browser_errors": [],
+  "data": "isolated temporary database and session"
+}

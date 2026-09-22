@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-09-22T19:30:05.830947+00:00",
+  "environment": {
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "logical_cpus": 8,
+    "python": "3.13.1",
+    "java": "openjdk version \"24.0.1\" 2025-04-15"
+  },
+  "clearledger": {
+    "workload": "200 sequential receive+process operations; 100 additional event IDs for one payment processed with 8 threads",
+    "unique_deposits": 200,
+    "duration_seconds": 0.133,
+    "operations_per_second": 1499.97,
+    "receive_and_process_p50_ms": 0.586,
+    "receive_and_process_p95_ms": 0.969,
+    "concurrent_duplicate_events": 100,
+    "actual_duplicate_payment_postings": 1,
+    "invariants": {
+      "balanced": true,
+      "nonnegative_wallet": true,
+      "holds_reconciled": true,
+      "refunds_bounded": true
+    },
+    "scope": "SQLite WAL on this host; includes Python service and DB transactions; excludes HTTP and browser"
+  },
+  "marketlab": {
+    "workload": "100 warm-up orders, then 200 alternating 5-share market orders; 1 synthetic tick between orders",
+    "orders": 200,
+    "engine_p50_microseconds": 39.646,
+    "engine_p95_microseconds": 283.0,
+    "bridge_roundtrip_p95_ms": 1.75,
+    "replayed_commands": 400,
+    "replay_identical": true,
+    "invariants": {
+      "cash_reconciled": true,
+      "position_reconciled": true,
+      "nonnegative_buying_power": true,
+      "no_overselling": true,
+      "uncrossed_book": true
+    },
+    "scope": "Single Java process, one symbol, synthetic depth; engine timer includes command handling but excludes snapshot serialization, IPC, HTTP, and browser. Not a JMH benchmark.",
+    "liquidity_comparison": {
+      "liquid": {
+        "requested": 50,
+        "filled": 50,
+        "fill_count": 1,
+        "average_price_cents": 10002.0,
+        "fees_cents": 501
+      },
+      "thin": {
+        "requested": 50,
+        "filled": 45,
+        "fill_count": 8,
+        "average_price_cents": 10066.2,
+        "fees_cents": 458
+      }
+    }
+  }
+}

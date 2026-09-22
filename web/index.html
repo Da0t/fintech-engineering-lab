@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Two working fintech engineering demos: auditable money movement and deterministic market execution.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23283b34'/%3E%3Cpath d='M12 26V11q0-6 8-6v5q-3 0-3 3v2h5v4h-5v7z' fill='%23fff'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%23d95532'/%3E%3C/svg%3E">
+  <title>ClearLedger · Fintech Engineering Lab</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar">
+    <a class="brand" href="/clearledger"><span class="brand-mark">f<span>·</span></span><span>fintech<br><strong>engineering lab</strong></span></a>
+    <div class="nav-label">THE PROJECTS <span>02</span></div>
+    <nav aria-label="Projects">
+      <a href="/clearledger" data-page="ledger" aria-label="ClearLedger — money movement"><span class="nav-icon">▤</span><span>ClearLedger<small>Money movement</small></span><span class="nav-arrow">↗</span></a>
+      <a href="/marketlab" data-page="market" aria-label="MarketLab — execution and replay"><span class="nav-icon">⌁</span><span>MarketLab<small>Execution & replay</small></span><span class="nav-arrow">↗</span></a>
+    </nav>
+    <div class="sidebar-note"><span class="eyebrow">BUILT TO BE INSPECTED</span><p>Follow the data.<br>Break the happy path.<br>Verify the result.</p><a href="/docs" target="_blank" rel="noopener">Explore the API <span>↗</span></a><a href="https://github.com/Da0t/fintech-engineering-lab" target="_blank" rel="noopener">View source on GitHub <span>↗</span></a></div>
+    <div class="sidebar-bottom"><span class="status-dot"></span>Local sandbox<small>Synthetic data. No real funds.</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div>PORTFOLIO <span>/</span> <strong id="breadcrumb">CLEARLEDGER</strong></div><div class="controls"><button id="new-session" class="compact" data-action="new-session" hidden>New session ↻</button><span class="sandbox-label">SIMULATION ENVIRONMENT</span></div></header>
+    <main id="main" tabindex="-1"><div class="loading">Connecting to the local engine…</div></main>
+    <footer>ENGINEERED FOR CORRECTNESS <span>All amounts in USD · Local demonstration</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="form-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+</body>
+</html>
