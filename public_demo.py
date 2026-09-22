@@ -107,9 +107,9 @@ def run_java(commands):
         with compile_lock:
             if not target.exists() or target.stat().st_mtime < source.stat().st_mtime:
                 build.mkdir(exist_ok=True)
-                subprocess.run(["javac", "--release", "17", "-d", str(build), str(source)], check=True, capture_output=True, timeout=30)
-    result = subprocess.run([executable, "-Xms16m", "-Xmx128m", "-XX:ActiveProcessorCount=1", "-cp", str(build), "MarketEngine", "--batch"],
-        input="\n".join(commands)+"\n", text=True, capture_output=True, timeout=12)
+                subprocess.run(["javac", "-encoding", "UTF-8", "--release", "17", "-d", str(build), str(source)], check=True, capture_output=True, timeout=30)
+    result = subprocess.run([executable, "-Dfile.encoding=UTF-8", "-Xms16m", "-Xmx128m", "-XX:ActiveProcessorCount=1", "-cp", str(build), "MarketEngine", "--batch"],
+        input="\n".join(commands)+"\n", text=True, encoding="utf-8", capture_output=True, timeout=12)
     if result.returncode != 0:
         raise RuntimeError("Java sandbox could not start")
     value = json.loads(result.stdout)

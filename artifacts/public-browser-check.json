@@ -1,0 +1,15 @@
+{
+  "url": "https://fintech-engineering-lab.vercel.app",
+  "checks": [
+    "anonymous desktop and mobile access without login",
+    "ledger visitor isolation and same-tab refresh persistence",
+    "public ledger incident and recovery",
+    "real Java fills, visitor isolation, and deterministic replay",
+    "public thin-liquidity partial fills",
+    "reset affects only selected project in selected visitor session",
+    "responsive layout and no JavaScript exceptions"
+  ],
+  "passed": 7,
+  "browser_errors": [],
+  "authentication": "none; two fresh browser contexts"
+}

@@ -24,8 +24,8 @@ class Market:
         build.mkdir(exist_ok=True)
         target = build / "MarketEngine.class"
         if not target.exists() or target.stat().st_mtime < source.stat().st_mtime:
-            subprocess.run(["javac", "-d", str(build), str(source)], check=True, capture_output=True, timeout=30)
-        self.process = subprocess.Popen(["java", "-cp", str(build), "MarketEngine"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
+            subprocess.run(["javac", "-encoding", "UTF-8", "--release", "17", "-d", str(build), str(source)], check=True, capture_output=True, timeout=30)
+        self.process = subprocess.Popen(["java", "-Dfile.encoding=UTF-8", "-cp", str(build), "MarketEngine"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8", bufsize=1)
 
     def command(self, command):
         if "\n" in command or "\r" in command:

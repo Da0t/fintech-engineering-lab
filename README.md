@@ -6,11 +6,12 @@ replay, distributed-systems, and full-stack experience.
 
 | Project | What it demonstrates | Demo |
 | --- | --- | --- |
-| **ClearLedger** | Balanced journal, durable event inbox, idempotency, reservations, refunds, and provider reconciliation | `/clearledger` |
-| **MarketLab** | Java price/time matching, execution costs, buying-power reservations, synthetic feed recovery, and deterministic replay | `/marketlab` |
+| **ClearLedger** | Balanced journal, durable event inbox, idempotency, reservations, refunds, and provider reconciliation | [Open public demo](https://fintech-engineering-lab.vercel.app/clearledger) |
+| **MarketLab** | Java price/time matching, execution costs, buying-power reservations, synthetic feed recovery, and deterministic replay | [Open public demo](https://fintech-engineering-lab.vercel.app/marketlab) |
 
-These are **local, synthetic prototypes**. No accounts at financial institutions,
-API keys, payment credentials, or real funds are needed.
+These are **synthetic prototypes with public demos and a local mode**. No login,
+accounts at financial institutions, API keys, payment credentials, or real funds
+are needed to try the public demos.
 
 Source: [Da0t/fintech-engineering-lab](https://github.com/Da0t/fintech-engineering-lab).
 The public deployment uses [isolated visitor sandboxes](docs/public-deployment.md)

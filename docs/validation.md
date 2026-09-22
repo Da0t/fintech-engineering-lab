@@ -2,6 +2,19 @@
 
 ## Automated checks
 
+Public-hosting update: **42 tests passed** after adding the isolated replay adapter.
+The public-mode tests cover visitor isolation, stable ledger reconstruction,
+incident recovery, Java execution and replay, request/workload limits, and session
+resets. The first GitHub Actions run also passed on Linux with Java 17.
+The original local-mode results below are retained as the baseline.
+
+**7 production browser checks passed** at
+https://fintech-engineering-lab.vercel.app using two fresh, unauthenticated browser
+contexts. They verified desktop/mobile access, isolated ledger state, payment
+recovery, Java execution and replay, thin-book partial fills, and project-local
+resets, with no browser JavaScript exceptions. The exact checks are recorded in
+[`public-browser-check.json`](../artifacts/public-browser-check.json).
+
 - **35 tests passed** with `python3 -m pytest -q --tb=short`.
 - Coverage includes concurrent deposits and reservations, duplicate identities,
   conflicting payloads, refund limits, rollback after journal insertion, durable

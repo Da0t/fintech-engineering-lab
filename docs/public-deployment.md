@@ -1,5 +1,11 @@
 # Public deployment
 
+Public origin: **https://fintech-engineering-lab.vercel.app**
+
+- [ClearLedger](https://fintech-engineering-lab.vercel.app/clearledger)
+- [MarketLab](https://fintech-engineering-lab.vercel.app/marketlab)
+- [Source code](https://github.com/Da0t/fintech-engineering-lab)
+
 The deployment runs the same Python ledger and Java matching engine as the local
 projects. Vercel hosts FastAPI; the build downloads a checksum-pinned Temurin JDK,
 compiles `MarketEngine.java`, and uses `jlink` to bundle only Java's base module.
